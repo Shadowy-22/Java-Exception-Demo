@@ -1,0 +1,42 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.javadoc
+*.log
+
+# VS Code
+.vscode/
+.settings/
+*.code-workspace
+
+# Build files
+/build/
+bin/
+target/
+out/
+
+# Maven
+/.mvn/
+pom.xml.tags
+
+# Gradle
+.gradle/
+build/
+*.gradle
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+
+# Other
+*.log
+*.swp
+*~
