@@ -1,5 +1,5 @@
 ## Overview
-These activity focuses on exceptions, static and final keywords, collections, and streams in Java. The challenges involve implementing methods and classes that handle exceptions effectively.
+These activities focuses on exceptions, static and final keywords, collections, and streams in Java. The challenges involve implementing methods and classes that handle exceptions effectively.
 
 ## Challenge 1: Exceptions with Division
 The first challenge involves testing a division method that handles different values for the numerator and denominator. It emphasizes the importance of managing division by zero and implementing appropriate exception handling.
