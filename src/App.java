@@ -3,6 +3,7 @@ import java.util.Scanner;
 import Ejercicios.Desafio_1.Division;
 import Ejercicios.Desafio_2.ColaDeTrabajo;
 import Ejercicios.Desafio_2.Interfaces.Trabajo;
+import Ejercicios.Desafio_4.Streams;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -13,7 +14,7 @@ public class App {
             System.out.println("Selecciona una opción:");
             System.out.println("1. Desafio 1: Division");
             System.out.println("2. Desafio 2: Cola Trabajo");
-            System.out.println("3. Desafio 5: Calcular Radio");
+            System.out.println("3. Desafio 4: Streams");
             System.out.println("0. Salir");
 
             int choice = scanner.nextInt();
@@ -27,7 +28,7 @@ public class App {
                     menuColaTrabajo(scanner);
                     break;
                 case 3:
-                    menuCalcRadio(scanner);
+                    menuStream(scanner);
                     break;
                 case 0:
                     exit = true;
@@ -89,10 +90,6 @@ public class App {
         }
     }
 
-    private static void menuCalcRadio(Scanner scanner) {
-        // Implementación futura
-    }
-
     private static boolean isColaCreada(ColaDeTrabajo cola) {
         if (cola == null) {
             System.out.println("Primero debes crear la cola.");
@@ -123,6 +120,35 @@ public class App {
             System.out.println("¿Deseas realizar otra operación? (1: Sí, 0: No)");
             int choice = scanner.nextInt();
             exit = (choice == 0);
+        }
+    }
+
+    private static void menuStream(Scanner scanner) {
+        Streams streams = new Streams();
+        boolean exit = false;
+
+        while (!exit) {
+            System.out.println("\n--- Streams ---");
+            System.out.println("1. Filtrar y Ordenar");
+            System.out.println("2. Calcular Promedio");
+            System.out.println("0. Volver al menú principal");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consumir el salto de línea
+
+            switch (choice) {
+                case 1:
+                    streams.ejemploFiltrarYOrdenar(); // Llamamos al primer ejemplo
+                    break;
+                case 2:
+                    streams.ejemploCalcularPromedio(); // Llamamos al segundo ejemplo
+                    break;
+                case 0:
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Opción no válida.");
+            }
         }
     }
 }
